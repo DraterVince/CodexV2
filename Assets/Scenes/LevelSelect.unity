@@ -20514,6 +20514,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &303972673
 =======
 --- !u!1 &307853045
@@ -20785,6 +20786,8 @@ CanvasRenderer:
   m_SizeDelta: {x: -860, y: -440}
   m_Pivot: {x: 0.5, y: 0.5}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+>>>>>>> 70b5221 (5/15/2025 Updates: Config Main Menu Start Button)
 --- !u!1 &308663713
 GameObject:
   m_ObjectHideFlags: 0
@@ -28555,7 +28558,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 307853045}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -34830,7 +34833,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 307853045}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -40148,14 +40151,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831701600}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 =======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> 70b5221 (5/15/2025 Updates: Config Main Menu Start Button)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Father: {fileID: 1973169461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40169,6 +40177,13 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 158, y: -25}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+  m_Father: {fileID: 1973169461}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 117, y: -10}
+>>>>>>> 70b5221 (5/15/2025 Updates: Config Main Menu Start Button)
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831701602
@@ -40760,7 +40775,7 @@ RectTransform:
   - {fileID: 706059356}
   - {fileID: 247917105}
   - {fileID: 294370515}
-  - {fileID: 307853046}
+  - {fileID: 1973169461}
   - {fileID: 1525650427}
   - {fileID: 995929763}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
@@ -89829,7 +89844,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 307853045}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -99011,15 +99026,20 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973169460}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 =======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> 70b5221 (5/15/2025 Updates: Config Main Menu Start Button)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 158074100}
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {fileID: 831701601}
   m_Father: {fileID: 852323738}
@@ -99034,6 +99054,14 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 41, y: -15}
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+  - {fileID: 831701601}
+  m_Father: {fileID: 852323738}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 712, y: -409}
+>>>>>>> 70b5221 (5/15/2025 Updates: Config Main Menu Start Button)
   m_SizeDelta: {x: 394.3702, y: 133.1229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973169462
