@@ -32,6 +32,7 @@ public class ItemManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.15f);
             cardDisplays[i].gameObject.SetActive(true);
+            cardDisplays[i].gameObject.transform.localScale = Vector3.one;
 
             selectedRandomCard.Add(selectedCard[randomIndex]);
             selectedCard.RemoveAt(randomIndex);
@@ -45,6 +46,7 @@ public class ItemManager : MonoBehaviour
         {
             cardDisplays[i].gameObject.SetActive(false);
             cardDisplays[i].gameObject.transform.SetParent(grid.transform);
+            cardDisplays[i].gameObject.transform.localScale = Vector3.one;
         }
         StartCoroutine(StartRandom());
     }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ab2d51329f7430544b52195f94d468e0
+=======
+guid: e702d57436f798d4fb46e4f8dd2eebc7
+>>>>>>> 37461c4 (COMMIT: Most changes up to unfixed google login, unfixed multiplayer but with working domain)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

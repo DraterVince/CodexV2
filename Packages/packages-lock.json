@@ -1,6 +1,7 @@
 {
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -11,6 +12,15 @@
       "version": "1.0.0",
       "depth": 0,
 =======
+=======
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a7c6b49a0141a5bff9b1983e38137522ef61977d"
+    },
+>>>>>>> 37461c4 (COMMIT: Most changes up to unfixed google login, unfixed multiplayer but with working domain)
     "com.unity.2d.animation": {
       "version": "9.1.1",
       "depth": 1,

@@ -8,29 +8,38 @@ EditorBuildSettings:
   m_Scenes: []
 =======
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoginScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 798cfb77b9ced6c4b9d10bd595016c84
   - enabled: 1
-    path: Assets/Scenes/NewGame.unity
+    path: Assets/Scenes/Singleplayer.unity
     guid: 9c34ab3005f815f45b9eaec57d460548
   - enabled: 1
-    path: Assets/Scenes/LoadGame.unity
+    path: Assets/Scenes/Multiplayer.unity
     guid: 9d2390da2da2103479c3eed796313ff3
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 9aef1e236b74f3b42bb2df1c4147d5a1
   - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: a1ce0551fc6adcd48831e48de4bdf1ff
+  - enabled: 1
     path: Assets/Scenes/Part 1 Levels/Part1Level1.unity
     guid: 13bb109fcc9082f4fabd89f02910ab1a
   - enabled: 1
     path: Assets/Scenes/Part 1 Levels/Part1Level2.unity
-    guid: a4ecad981cdbde846a2adc26417e20f9
+    guid: ccef9c9c8451b844d9cbc16801cb8fd8
   - enabled: 1
     path: Assets/Scenes/Part 1 Levels/Part1Level3.unity
+    guid: b4b9ca3025369784f967d590b8a2a962
+  - enabled: 0
+    path: Assets/Scenes/Part 1 Levels/Part1Level2OG.unity
+    guid: a4ecad981cdbde846a2adc26417e20f9
+  - enabled: 0
+    path: Assets/Scenes/Part 1 Levels/Part1Level3OG.unity
     guid: e1d7e053f278e9a4485b5e7d89a0e17e
   - enabled: 1
     path: Assets/Scenes/Part 1 Levels/Part1Level4.unity
@@ -50,5 +59,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Part 1 Levels/Part1Level9.unity
     guid: 301ec408cedd8ae4dbbb2171330dd01f
+<<<<<<< HEAD
 >>>>>>> 67f9692 (Initial Commit: Working Gameplay, Working Level Select, Need Polish.)
+=======
+  - enabled: 1
+    path: Assets/Scenes/Part 1 Levels/Part1Level10.unity
+    guid: 035dbc54d7abdbf4182358bef0bd0a75
+>>>>>>> 37461c4 (COMMIT: Most changes up to unfixed google login, unfixed multiplayer but with working domain)
   m_configObjects: {}
