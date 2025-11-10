@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    [Header (" RANDOMIZED COUNTER ")]
     public int counter;
-
-    [Header (" CONTAINERS ")]
     public List<CardListContainer> cardContainer = new List<CardListContainer>();
     public List<CardDisplayContainer> cardDisplayContainer = new List<CardDisplayContainer>();
 
@@ -34,6 +31,12 @@ public class CardManager : MonoBehaviour
 
     public IEnumerator Randomize()
     {
+        if (counter < 0 || counter >= cardContainer.Count || counter >= cardDisplayContainer.Count)
+        {
+            Debug.LogWarning($"CardManager counter {counter} is out of range. Cannot randomize cards.");
+            yield break;
+        }
+
         chosenCards = new List<Item>(cardContainer[counter].cards);
 
         for (int i = 0; i < cardDisplayContainer[counter].cardDisplay.Count; i++)
@@ -46,9 +49,9 @@ public class CardManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.15f);
             cardDisplayContainer[counter].cardDisplay[i].gameObject.SetActive(true);
+            cardDisplayContainer[counter].cardDisplay[i].gameObject.transform.localScale = Vector3.one;
 
             chosenCards.RemoveAt(rand);
-            
         }
     }
 
@@ -56,39 +59,64 @@ public class CardManager : MonoBehaviour
     {
         chosenCards.Clear();
 
+        if (counter < 0 || counter >= cardDisplayContainer.Count)
+        {
+            Debug.LogWarning($"CardManager counter {counter} is out of range. CardDisplayContainer count: {cardDisplayContainer.Count}");
+            return;
+        }
+
+        // Reset cards in the display container (grid area)
         for (int i = 0; i < cardDisplayContainer[counter].cardDisplay.Count; i++)
         {
             cardDisplayContainer[counter].cardDisplay[i].gameObject.SetActive(false);
             cardDisplayContainer[counter].cardDisplay[i].gameObject.transform.SetParent(grid.transform);
+            cardDisplayContainer[counter].cardDisplay[i].gameObject.transform.localScale = Vector3.one;
+        }
+
+        // Also check and clear ANY cards stuck in PlayedCard holders
+        // Search for all possible PlayedCard holders in the scene
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        int cardsCleared = 0;
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "PlayedCard" && obj.transform.childCount > 0)
+            {
+                Debug.Log($"[CardManager] Found PlayedCard holder '{obj.name}' with {obj.transform.childCount} cards at path: {GetGameObjectPath(obj)}");
+
+                // Move all children back to grid
+                while (obj.transform.childCount > 0)
+                {
+                    Transform child = obj.transform.GetChild(0);
+                    Debug.Log($"[CardManager] Moving card '{child.name}' back to grid");
+                    child.SetParent(grid.transform);
+                    child.gameObject.SetActive(false);
+                    child.localScale = Vector3.one;
+                    cardsCleared++;
+                }
+            }
+        }
+
+        if (cardsCleared > 0)
+        {
+            Debug.Log($"[CardManager] Successfully cleared {cardsCleared} cards from PlayedCard holders");
         }
     }
 
-    //public IEnumerator Randomize1()
-    //{
-    //    chosenCards = new List<Item>(cards);
+    /// <summary>
+    /// Helper method to get full hierarchy path of a GameObject for debugging
+    /// </summary>
+    private string GetGameObjectPath(GameObject obj)
+    {
+        string path = obj.name;
+        Transform parent = obj.transform.parent;
 
-    //    for (int i = 0; i < cardDisplays.Count; i++)
-    //    {
-    //        int randomIndex = Random.Range(0, chosenCards.Count);
+        while (parent != null)
+        {
+            path = parent.name + "/" + path;
+            parent = parent.parent;
+        }
 
-    //        cardDisplays[i].cardName = chosenCards[randomIndex].cardName;
-    //        cardDisplays[i].cardDesign.sprite = chosenCards[randomIndex].artwork;
-
-    //        yield return new WaitForSeconds(0.15f);
-    //        cardDisplays[i].gameObject.SetActive(true);
-
-    //        selectedRandomCard1.Add(chosenCards[randomIndex]);
-    //        chosenCards.RemoveAt(randomIndex);
-    //    }
-    //}
-    //public void ResetCards1()
-    //{
-    //    chosenCards.Clear();
-    //    for (int i = 0; i < cardDisplays.Count; i++)
-    //    {
-    //        cardDisplays[i].gameObject.SetActive(false);
-    //        cardDisplays[i].gameObject.transform.SetParent(grid.transform);
-    //    }
-    //}
-
+        return path;
+    }
 }
